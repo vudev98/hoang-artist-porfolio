@@ -2,7 +2,8 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link
+    Link,
+    useLocation
 } from "react-router-dom";
 
 import Home from './Home';
@@ -15,12 +16,7 @@ const Navbar = () => {
     return (
         <Router>
             <div>
-                <nav className='navbar'>
-                    <div className='navbar-container'>
-                        <Link to='/' className='navbar-logo'>
-                            Hoang Artist
-                        </Link>
-                    </div>
+                <div className='navbar'>
                     <div className='navbar-list'>
                         <ul>
                             <li>
@@ -41,28 +37,35 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <hr />
-                </nav>
+                </div>
                 <Switch>
                     <Route path="/" component={Home} exact>
-                        <Home />
                     </Route>
                     <Route path="/collection" component={Collection} exact>
-                        <Collection />
                     </Route>
                     <Route path="/exhibition" component={Exhibition} exact>
-                        <Exhibition />
                     </Route>
                     <Route path="/about" component={About} exact>
-                        <About />
                     </Route>
                     <Route path="/contact" component={Contact} exact>
-                        <Contact />
                     </Route>
                     <Route component={Error} />
                 </Switch>
             </div>
         </Router>
     )
+}
+
+const Error = () => {
+    let location = useLocation();
+
+    return (
+        <div>
+            <h3>
+                No match for <code>{location.pathname}</code>
+            </h3>
+        </div>
+    );
 }
 
 export default Navbar

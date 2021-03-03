@@ -33,6 +33,7 @@ ul {
 
 li {
   float: left;
+  margin: 1em;
 }
 
 li a {
