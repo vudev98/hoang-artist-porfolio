@@ -11,14 +11,14 @@ import Navbar from '../components/Navbar'
 
 const Header = () => {
     return (
-        <div className='navbar'>
-            <div className='navbar-container'>
+        <div className='navbar-container'>
+            <div className='logo-container'>
                 <Link to='/' className='navbar-logo'>
-                    <img src='' alt='logo'></img>
+                    <img src='./sample-logo.jpg' alt='logo' style={{ height: 50, width: 70 }}></img>
                 </Link>
             </div>
             <Navbar />
-        </div>
+        </div >
     )
 }
 

@@ -1,3 +1,10 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+ }
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -12,14 +19,21 @@ code {
     monospace;
 }
 
-.navbar-container {
-  float:left;
-  width: 50%;
+.navbar-container{ 
+  display: grid;
+  grid-template-columns: 33% 33% 33%; 
+  margin: 20 30;
 }
 
+.logo-container {
+  height: 100%;
+  margin: 20;
+  }
+
+
 .navbar-list {
-  float:left;
-  width: 50%;
+  grid-column: 2;
+  margin: auto;
 }
 
 ul {
@@ -27,21 +41,20 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  
-
 }
 
 li {
   float: left;
   margin: 1em;
+  display: block;
+  padding: 8px;
+  background-color: red;
 }
 
 li a {
-  display: block;
-  padding: 8px;
   text-decoration: none;
-  padding: 10px;
 }
+
 li a:visited {
   text-decoration: none; color: black;
 }
