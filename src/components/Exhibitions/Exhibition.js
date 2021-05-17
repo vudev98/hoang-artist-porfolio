@@ -1,11 +1,13 @@
 import React from 'react'
 
-const About = () => {
+
+
+const Exhibition = () => {
     return (
         <div className="main">
-            about page
+            trien lam
         </div>
     )
 }
 
-export default About
+export default Exhibition
