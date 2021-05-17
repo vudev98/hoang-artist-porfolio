@@ -4,7 +4,7 @@ import PictureCard from './PictureCard'
 const Collection = () => {
     const picList = [{
         id: 1,
-        title: 'Co Gai Dao Do 2',
+        title: 'Portrait Dao Do Girl 1',
         src: require('../../images/thumbnails/Co Gai Dao Do 1- thumbnail.jpg'),
         text: 'co-gai-dao-do-1',
         size: '80 x 80 cm',
@@ -12,7 +12,7 @@ const Collection = () => {
     },
     {
         id: 2,
-        title: 'Co Gai Dao Do 1',
+        title: 'Portrait Dao Do Girl 2',
         src: require('../../images/thumbnails/Co Gai Dao Do 2-thumbnail.jpg'),
         text: 'co-gai-dao-do-2',
         size: '90 x 90 cm',
@@ -36,7 +36,7 @@ const Collection = () => {
     },
     {
         id: 5,
-        title: 'The Girl Play Flute',
+        title: 'The Girl Playing Flute',
         src: require('../../images/thumbnails/The Girl Play Flute-thumbnail.jpg'),
         text: 'co-gai-choi-sao',
         size: '90 x 120 cm',
@@ -64,6 +64,7 @@ const Collection = () => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
+        // justifyContent: 'left',
         flexDirection: 'row',
         // width: '100%',
         // padding: '5% 10%',

@@ -7,6 +7,7 @@ import Home from './components/Home';
 import Collection from './components/Collections/Collection';
 import Exhibition from './components/Exhibitions/Exhibition';
 import Contact from './components/Contact';
+import itemDetail from './components/itemDetail';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/exhibition" component={Exhibition} exact />
           <Route path="/about" component={About} exact />
           <Route path="/contact" component={Contact} exact />
+          <Route path="/collection/:id" component={itemDetail} exact />
           <Route component={Error} />
         </Switch>
         <Footer />
