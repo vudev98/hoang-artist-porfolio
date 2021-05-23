@@ -1,45 +1,54 @@
 import React from 'react'
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom'
 
 const PictureCard = (props) => {
+	const itemCard = {
+		position: 'relative',
+		flex: '1 1 20%',
+		overflow: 'hidden',
+		margin: '20px',
+		padding: '15px',
+		backgroundColor: 'rgb(247, 247, 247)',
+	}
 
-    const itemCard = {
-        position: 'relative',
-        flex: '0 0 30%',
-        overflow: 'hidden',
-        margin: '20px',
-        padding: '15px',
-        backgroundColor: 'rgb(240, 240, 240)'
-    }
+	const pictureStyle = {
+		width: '410px',
+		height: '300px',
+		objectFit: 'cover',
+		overflow: 'hidden',
+		// filter: 'drop-Shadow(0 3px 5px rgba(0,0,0,.7))'
+	}
 
-    const pictureStyle = {
-        width: '320px',
-        height: '300px',
-        objectFit: 'cover',
-        filter: 'drop-ShadowRoot(0 3px 5px rgba(0,0,0,.7))'
-    }
+	const infoStyle = {
+		marginTop: '10px',
+	}
 
-    const infoStyle = {
-        marginTop: '10px'
-    }
+	const subInfo = {
+		marginTop: '8px',
+	}
 
-    return (
-        <div className='item-card' style={itemCard}>
-            <div className='image'>
-                <img src={props.pic.src} alt={props.pic.text} style={pictureStyle}></img>
-            </div>
-            <div className='info' style={infoStyle}>
-                <h4 className='title'>{props.pic.title} </h4>
-                <div className='sub-info' >
-                    <div className='size'>size: {props.pic.size}</div>
-                    <div className='material'>Material: {props.pic.material}</div>
-                </div>
-            </div>
-            <div className='overlay'>
-                <Link to={`/img/${props.pic.id}`}></Link>
-            </div>
-        </div>
-    )
+	return (
+		<div className='item-card' id='item-card'>
+			<div className='image'>
+				<Link to={`/collection/${props.pic.id}`}>
+					<img
+						src={props.pic.src}
+						alt={props.pic.text}
+						style={pictureStyle}
+					></img>
+				</Link>
+			</div>
+			<div className='info' style={infoStyle}>
+				<h4 className='title' id='title'>
+					{props.pic.title}{' '}
+				</h4>
+				<div className='sub-info' style={subInfo}>
+					<div className='size'>Size: {props.pic.size}</div>
+					<div className='material'>Material: {props.pic.material}</div>
+				</div>
+			</div>
+		</div>
+	)
 }
 
 export default PictureCard
