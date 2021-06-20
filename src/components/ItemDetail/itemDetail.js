@@ -1,3 +1,4 @@
+//eslint-disable-next-line
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import src from '../../images/90 x 90cm, Acrylic on canvas,  Ao DAI.jpg'
@@ -35,7 +36,7 @@ const itemDetail = (props) => {
 	return (
 		<div className='main'>
 			<div className='img-wrapper'>
-				<img onClick={on} src={src} style={pictureStyle}></img>
+				<img onClick={on} src={src} style={pictureStyle} alt=''></img>
 			</div>
 			<div id='overlay' onClick={off}>
 				<img id='image' src={src} alt=''></img>
@@ -45,7 +46,7 @@ const itemDetail = (props) => {
 				<table style={{ width: '100%' }}>
 					<tr>
 						<th>Artist: </th>
-						<td> {props.pic.artist}</td>
+						{/* <td> {props.pic.artist}</td> */}
 					</tr>
 				</table>
 				<Link to='/contact'>

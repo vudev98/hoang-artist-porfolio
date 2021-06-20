@@ -2,21 +2,11 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const PictureCard = (props) => {
-	const itemCard = {
-		position: 'relative',
-		flex: '1 1 20%',
-		overflow: 'hidden',
-		margin: '20px',
-		padding: '15px',
-		backgroundColor: 'rgb(247, 247, 247)',
-	}
-
 	const pictureStyle = {
 		width: '410px',
 		height: '300px',
 		objectFit: 'cover',
 		overflow: 'hidden',
-		// filter: 'drop-Shadow(0 3px 5px rgba(0,0,0,.7))'
 	}
 
 	const infoStyle = {
@@ -40,7 +30,7 @@ const PictureCard = (props) => {
 			</div>
 			<div className='info' style={infoStyle}>
 				<h4 className='title' id='title'>
-					{props.pic.title}{' '}
+					{props.pic.title}
 				</h4>
 				<div className='sub-info' style={subInfo}>
 					<div className='size'>Size: {props.pic.size}</div>

@@ -36,7 +36,7 @@ const Navbar = () => {
 				</li>
 				<li>
 					<Link onClick={clearState} to='/collection'>
-						My Collection
+						Collection
 					</Link>
 				</li>
 				<li>

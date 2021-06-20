@@ -66,15 +66,15 @@ const Collection = () => {
 			material: 'Acrylic on canvas',
 			artist: 'Ngo Duc Hoang',
 		},
-		{
-			id: 8,
-			title: 'Hanoi Girl II',
-			src: require('../../images/thumbnails/Hanoi Girl 2-thumbnail.jpg'),
-			text: 'co-gai-hanoi-1',
-			size: '90 x 90 cm',
-			material: 'Acrylic on canvas',
-			artist: 'Ngo Duc Hoang',
-		},
+		// {
+		// 	id: 8,
+		// 	title: 'Hanoi Girl II',
+		// 	src: require('../../images/thumbnails/Hanoi Girl 2-thumbnail.jpg'),
+		// 	text: 'co-gai-hanoi-1',
+		// 	size: '90 x 90 cm',
+		// 	material: 'Acrylic on canvas',
+		// 	artist: 'Ngo Duc Hoang',
+		// },
 	]
 
 	const listItems = picList.map((pic) => <PictureCard pic={pic} key={pic.id} />)
